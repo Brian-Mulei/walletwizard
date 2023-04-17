@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.0"
+  country_currency_pickers:
+    dependency: "direct main"
+    description:
+      name: country_currency_pickers
+      sha256: eacbca5af8d4c8c51bffedbe6c88320f1deba5f286b9ccba8d1fc19f02f12e96
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   cupertino_icons:
     dependency: "direct main"
     description:

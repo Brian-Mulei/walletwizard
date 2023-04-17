@@ -20,12 +20,22 @@ class DrawerView extends StatelessWidget {
               color: theme.primary,
             ),
             child: Center(child: Text('Wallet Wizard')),
+
           ),
+
           ListTile(
+            title: const Text('Home'),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+              Navigator.of(context).pushNamed("/");
+            },
+          ),  ListTile(
             title: const Text('Categories'),
             onTap: () {
               // Update the state of the app.
               // ...
+              Navigator.of(context).pushNamed("Category");
             },
           ),
           ListTile(
