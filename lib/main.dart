@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:walletwizard/views/auth/login.dart';
 import 'package:walletwizard/views/categories/categories_home.dart';
 import 'package:walletwizard/views/home/home_screen.dart';
+import 'package:walletwizard/views/transactions/transaction_home.dart';
 import 'package:walletwizard/widgets/colors.dart';
 
 void main() {
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => const HomeScreen(),
         'login' : (context) =>const LoginPage(),
-        'Category':(context) => const Categories()
+        'Category':(context) => const Categories(),
+        'Expense':(context) => const Transactions()
       },
     );
   }

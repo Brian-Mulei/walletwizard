@@ -58,61 +58,63 @@ class _HomeScreenState extends State<HomeScreen> {
                                      height: height/10,
                                      child: GestureDetector(
                                        onTap:() {
-                                         showDialog(context: context, builder: (BuildContext context){
-                                           return AlertDialog(
-                                             content: Stack(
-                                               clipBehavior: Clip.none, children: <Widget>[
-                                               Positioned(
-                                                 right: -40.0,
-                                                 top: -40.0,
-                                                 child: InkResponse(
-                                                   onTap: () {
-                                                     Navigator.of(context).pop();
-                                                   },
-                                                   child: CircleAvatar(
-                                                     backgroundColor:theme.primary,
-                                                     child: Icon(Icons.close,color: theme.secondary,),
-                                                   ),
-                                                 ),
-                                               ),
-                                               Form(
-                                                 key: _formKey,
-                                                 child: Column(
+                                         // showDialog(context: context, builder: (BuildContext context){
+                                         //   return AlertDialog(
+                                         //     content: Stack(
+                                         //       clipBehavior: Clip.none, children: <Widget>[
+                                         //       Positioned(
+                                         //         right: -40.0,
+                                         //         top: -40.0,
+                                         //         child: InkResponse(
+                                         //           onTap: () {
+                                         //             Navigator.of(context).pop();
+                                         //           },
+                                         //           child: CircleAvatar(
+                                         //             backgroundColor:theme.primary,
+                                         //             child: Icon(Icons.close,color: theme.secondary,),
+                                         //           ),
+                                         //         ),
+                                         //       ),
+                                         //       Form(
+                                         //         key: _formKey,
+                                         //         child: Column(
+                                         //
+                                         //           mainAxisSize: MainAxisSize.min,
+                                         //           children: <Widget>[
+                                         //
+                                         //             SizedBox(
+                                         //               height: height/5,
+                                         //               child: Padding(
+                                         //                 padding: const EdgeInsets.all(8.0),
+                                         //                 child: TextFormField( initialValue: 'Account Name',  decoration: const InputDecoration(
+                                         //                     labelText: 'Edit Name', enabledBorder: OutlineInputBorder()),),
+                                         //               ),
+                                         //             ),
+                                         //             Padding(
+                                         //               padding: const EdgeInsets.all(8.0),
+                                         //               child: Row(
+                                         //
+                                         //                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                         //                 children: [
+                                         //
+                                         //                   SlickButton(name: "UPDATE", tap: (){}, borderColor: theme.primary),
+                                         //
+                                         //                   SlickButton(name: "DELETE", tap: (){}, borderColor: theme.error)
+                                         //
+                                         //                 ],
+                                         //
+                                         //
+                                         //               ),
+                                         //             )
+                                         //           ],
+                                         //         ),
+                                         //       ),
+                                         //     ],
+                                         //     ),
+                                         //   );
+                                         // });
+                                           Navigator.pushNamed(context, 'Expense');
 
-                                                   mainAxisSize: MainAxisSize.min,
-                                                   children: <Widget>[
-
-                                                     SizedBox(
-                                                       height: height/5,
-                                                       child: Padding(
-                                                         padding: const EdgeInsets.all(8.0),
-                                                         child: TextFormField( initialValue: 'Account Name',  decoration: const InputDecoration(
-                                                             labelText: 'Edit Name', enabledBorder: OutlineInputBorder()),),
-                                                       ),
-                                                     ),
-                                                     Padding(
-                                                       padding: const EdgeInsets.all(8.0),
-                                                       child: Row(
-
-                                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                                         children: [
-
-                                                           SlickButton(name: "UPDATE", tap: (){}, borderColor: theme.primary),
-
-                                                           SlickButton(name: "DELETE", tap: (){}, borderColor: theme.error)
-
-                                                         ],
-
-
-                                                       ),
-                                                     )
-                                                   ],
-                                                 ),
-                                               ),
-                                             ],
-                                             ),
-                                           );
-                                         });
                                        },
                                        child: Card(
                                          shape: RoundedRectangleBorder(
