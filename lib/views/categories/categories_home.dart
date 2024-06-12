@@ -1,6 +1,5 @@
 import 'package:country_currency_pickers/country.dart';
 import 'package:country_currency_pickers/currency_picker_dialog.dart';
-import 'package:country_currency_pickers/currency_picker_dropdown.dart';
 import 'package:country_currency_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:walletwizard/widgets/buttons.dart';
@@ -20,7 +19,7 @@ class _CategoriesState extends State<Categories> {
   Country _selectedFilteredDialogCurrency =
   CountryPickerUtils.getCountryByCurrencyCode('INR');
 
-  Country _selectedFilteredDialogCountry =
+  final Country _selectedFilteredDialogCountry =
   CountryPickerUtils.getCountryByPhoneCode('90');
   @override
   Widget build(BuildContext context) {
@@ -216,7 +215,7 @@ class _CategoriesState extends State<Categories> {
     child: Row(
       children: <Widget>[
         CountryPickerUtils.getDefaultFlagImage(country),
-        SizedBox(
+        const SizedBox(
           width: 8.0,
         ),
         Text("${country.currencyCode}"),
@@ -229,11 +228,11 @@ class _CategoriesState extends State<Categories> {
     builder: (context) => Theme(
         data: Theme.of(context).copyWith(primaryColor: Colors.pink),
         child: CurrencyPickerDialog(
-            titlePadding: EdgeInsets.all(8.0),
+            titlePadding: const EdgeInsets.all(8.0),
             searchCursorColor: Colors.pinkAccent,
-            searchInputDecoration: InputDecoration(hintText: 'Search...'),
+            searchInputDecoration: const InputDecoration(hintText: 'Search...'),
             isSearchable: true,
-            title: Text('Select your Currency'),
+            title: const Text('Select your Currency'),
             onValuePicked: (Country country) =>
                 setState(() => _selectedFilteredDialogCurrency = country),
             // itemFilter: (c) => ['INR', 'CAD', 'USD', 'CHF', 'EUR']
@@ -244,9 +243,9 @@ class _CategoriesState extends State<Categories> {
   Widget _buildCurrencyDialogItem(Country country) => Row(
     children: <Widget>[
       CountryPickerUtils.getDefaultFlagImage(country),
-      SizedBox(width: 8.0),
+      const SizedBox(width: 8.0),
       Text("(${country.currencyCode})"),
-      SizedBox(width: 8.0),
+      const SizedBox(width: 8.0),
       Flexible(child: Text(country.name ?? ''))
     ],
   );

@@ -19,7 +19,7 @@ class DrawerView extends StatelessWidget {
 
               color: theme.primary,
             ),
-            child: Center(child: Text('Wallet Wizard')),
+            child: const Center(child: Text('Wallet Wizard')),
 
           ),
 

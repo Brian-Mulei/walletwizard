@@ -42,7 +42,7 @@ class _TransactionsState extends State<Transactions> {
               child: Column(
                 children: [
 
-                  Row(children: [
+                  const Row(children: [
 
 
                   ],),
